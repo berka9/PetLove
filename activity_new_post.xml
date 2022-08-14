@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewPost">
+
+    <EditText
+        android:id="@+id/AnimalName"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Hayvanın Adı"
+        android:background="@drawable/kadi"
+        android:textAlignment="center"
+        android:inputType="text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <EditText
+        android:id="@+id/AnimalAge"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Hayvanın Yaşı"
+        android:inputType="number"
+        android:background="@drawable/kadi"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AnimalName" />
+
+    <EditText
+        android:id="@+id/AnimalBreed"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/kadi"
+        android:ems="10"
+        android:hint="Hayvanın Cinsi"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AnimalAge" />
+
+    <EditText
+        android:id="@+id/AnimalLocation"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:background="@drawable/kadi"
+        android:textAlignment="center"
+        android:hint="İlçe/Şehir"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AnimalBreed" />
+
+    <EditText
+        android:id="@+id/AnimalNumber"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="20sp"
+        android:background="@drawable/kadi"
+        android:textAlignment="center"
+        android:hint="İletişim Bilgileri"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AnimalLocation" />
+
+    <Button
+        android:id="@+id/AnimalPost"
+        android:layout_width="234dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/giris"
+        android:backgroundTint="#0ED6B9"
+        android:text="İlan Oluştur"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AnimalNumber"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="147dp"
+        android:layout_height="104dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup2"
+        app:layout_constraintHorizontal_bias="0.621"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.29"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/dog"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:onClick="checkButton"
+            android:text="Köpek"
+            android:textAlignment="center" />
+
+        <RadioButton
+            android:id="@+id/cat"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:onClick="checkButton"
+            android:text="Kedi"
+            android:textAlignment="center">
+
+        </RadioButton>
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="150dp"
+        android:layout_height="103dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.289"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:onClick="checkButton"
+            android:text="Erkek"
+            android:textAlignment="center">
+
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:onClick="checkButton"
+            android:text="Dişi"
+            android:textAlignment="center" />
+
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="196dp"
+        android:layout_height="144dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.042"
+        app:srcCompat="@drawable/logosml" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
